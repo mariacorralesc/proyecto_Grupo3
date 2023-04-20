@@ -2,7 +2,7 @@ from PyQt6 import QtWidgets
 from PyQt6.QtCore import *
 from PyQt6.QtGui import *
 from PyQt6.QtWidgets import *
-from listaproductos import Ui_FrmProductos
+from UI.Inventario.uiListaproductos import Listaproductos
 import sqlite3
 import sys
 
@@ -10,7 +10,7 @@ import sys
 class FrmProductos(QtWidgets.QMainWindow):
     def __init__(self, parent=None):
         super().__init__(parent)
-        self.ui = Ui_FrmProductos()
+        self.ui = Listaproductos()
         self.ui.setupUi(self)
         self.ui.btGuardar.clicked.connect(self.guardar_click)
         self.ui.btActualizar.clicked.connect(self.actualizar_click)
