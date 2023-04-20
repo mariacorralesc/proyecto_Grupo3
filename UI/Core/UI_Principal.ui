@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>837</width>
-    <height>627</height>
+    <height>628</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -115,16 +115,16 @@ background-color: rgb(76, 154, 255);</string>
      <string>Menú</string>
     </property>
     <addaction name="separator"/>
-    <addaction name="actionRegristro_de_art_culos"/>
-    <addaction name="actionCrear_bodega"/>
-    <addaction name="actionPerfil_de_distribuidores"/>
-    <addaction name="actionArticulos_de_Bodega"/>
-    <addaction name="actionEntrega_de_articulos"/>
+    <addaction name="mnuProductos"/>
+    <addaction name="mnuBodegas"/>
+    <addaction name="mnuDistribuidores"/>
+    <addaction name="mnuArtBodega"/>
+    <addaction name="mnuEntregaProducto"/>
     <addaction name="separator"/>
    </widget>
    <addaction name="menuMen"/>
   </widget>
-  <action name="actionRegristro_de_art_culos">
+  <action name="mnuProductos">
    <property name="text">
     <string>Lista de Productos</string>
    </property>
@@ -135,7 +135,7 @@ background-color: rgb(76, 154, 255);</string>
     </font>
    </property>
   </action>
-  <action name="actionCrear_bodega">
+  <action name="mnuBodegas">
    <property name="text">
     <string>Lista de Bodegas</string>
    </property>
@@ -146,7 +146,7 @@ background-color: rgb(76, 154, 255);</string>
     </font>
    </property>
   </action>
-  <action name="actionPerfil_de_distribuidores">
+  <action name="mnuDistribuidores">
    <property name="text">
     <string>Lista de Distribuidores</string>
    </property>
@@ -157,12 +157,12 @@ background-color: rgb(76, 154, 255);</string>
     </font>
    </property>
   </action>
-  <action name="actionArticulos_de_Bodega">
+  <action name="mnuArtBodega">
    <property name="text">
     <string>Articulos de Bodega</string>
    </property>
   </action>
-  <action name="actionEntrega_de_articulos">
+  <action name="mnuEntregaProducto">
    <property name="text">
     <string>Entrega de articulos</string>
    </property>
