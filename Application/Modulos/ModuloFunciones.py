@@ -5,41 +5,59 @@ from UI.Inventario.uilistabodegas import Ui_UI_Bodegas
 from UI.Inventario.uilistadistribuidores import Ui_UI_Distribuidores
 from UI.Inventario.uiartbodega import Ui_UI_ArtBodega
 from UI.Inventario.uientproducto import Ui_UI_EntProducto
-from Dominio.Inventario.Entities import Productos,Bodega,Distribuidores
+from Dominio.Inventario.Entities import Productos, Bodega, Distribuidores
 from Application.Core.CoreApp import *
 import sqlite3
 import sys
+
 
 class FrmProductos(QtWidgets.QDialog):
     def __init__(self) -> None:
         super().__init__()
         self.ui = Ui_UI_Productos()
         self.ui.setupUi(self)
-        self.oProducto = None
-        self.modelolista = QtGui.QStandardItemModel()
-        self.ui.lstProducto.setModel(self.modelolista)
-        
-        
-        
-        
+        # self.oProducto = None
+        # self.modelolista = QtGui.QStandardItemModel()
+        # self.ui.lstProducto.setModel(self.modelolista)
+
+        # self.ui.btGuardar.clicked.connect(
+        #     self.btGuardar_clicked_GuardarProducto)
+
+        # def btGuardar_clicked_GuardarProducto(self):
+        #     self.oProducto = Productos()
+        #     self.oProducto.codigo = self.ui.txtCodigo.text()
+        #     self.oProducto.cantidad = self.ui.txtCantidad.text()
+        #     self.oProducto.producto = self.ui.txtProducto.text()
+        #     self.oProducto.precio = float(self.ui.txtPrecio.text())
+        #     itemView = (self.oProducto.codigo + " " +
+        #                 self.oProducto.producto + " " +
+        #                 self.oProducto.cantidad + " " +
+        #                 str(self.oProducto.precio))
+        #     item = QtGui.QStandardItem(itemView)
+        #     self.modelolista.appendRow(item)
+        #     Persistencia.agregarProducto(self.oProducto)
+
+
 class FrmBodegas(QtWidgets.QMainWindow):
     def __init__(self) -> None:
         super().__init__()
         self.ui = Ui_UI_Bodegas()
         self.ui.setupUi(self)
-        
+
+
 class FrmDistribuidores(QtWidgets.QMainWindow):
     def __init__(self) -> None:
         super().__init__()
         self.ui = Ui_UI_Distribuidores()
         self.ui.setupUi(self)
-        
+
+
 class FrmArtBodega(QtWidgets.QMainWindow):
     def __init__(self) -> None:
         super().__init__()
         self.ui = Ui_UI_ArtBodega()
         self.ui.setupUi(self)
-        
+
     #     self.ui.btGuardar.clicked.connect(self.guardar_click)
     #     self.ui.btActualizar.clicked.connect(self.actualizar_click)
     #     self.iniciar_basede_datos()
@@ -100,9 +118,9 @@ class FrmArtBodega(QtWidgets.QMainWindow):
     #             newitem = QTableWidgetItem(elemento)
     #             self.ui.tableWidget.setItem(j, i, newitem)
 
+
 class FrmEntProducto(QtWidgets.QMainWindow):
     def __init__(self) -> None:
         super().__init__()
         self.ui = Ui_UI_EntProducto()
         self.ui.setupUi(self)
-        
