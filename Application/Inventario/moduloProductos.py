@@ -35,9 +35,11 @@ class FrmProductos(QtWidgets.QMainWindow):
         self.cantidad = str(self.ui.txtCantidad.text())
         self.precio = str(self.ui.txtPrecio.text())
 
-        self.registro = (self.codigo, self.producto, self.cantidad, self.precio)
+        self.registro = (self.codigo, self.producto,
+                         self.cantidad, self.precio)
 
-        cursor.execute("INSERT INTO productos (codigo,producto,cantidad,precio) VALUES (?,?,?,?)", self.registro)
+        cursor.execute(
+            "INSERT INTO productos (codigo,producto,cantidad,precio) VALUES (?,?,?,?)", self.registro)
 
         conn.commit()
         self.ui.lineEdit.setText("")
@@ -49,7 +51,8 @@ class FrmProductos(QtWidgets.QMainWindow):
         cursor = conn.cursor()
 
         # Se cargan los datos indicados de la tabla
-        cursor.execute("SELECT codigo, producto, cantidad, precio FROM productos")
+        cursor.execute(
+            "SELECT codigo, producto, cantidad, precio FROM productos")
         table_info = cursor.fetchall()
         string_list = QStringList()
         database_table_column_count = 4
