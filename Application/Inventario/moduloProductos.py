@@ -1,6 +1,6 @@
 import traceback
 from PyQt6 import QtCore, QtGui, QtWidgets
-from UI.Inventario.uiListaproductos import Ui_UIListaproductos
+from UI.Inventario.uiListaproductos import Ui_UIListaproductos 
 from Dominio.Inventario.Entities import Productos
 from Application.Core.CoreApp import *
 import sqlite3
@@ -41,7 +41,7 @@ class FrmListaproductos(QtGui.QMainWindow):
 	    conn.commit()
 	    self.ui.lineEdit.setText("")
 	    conn.commit()
-	    QMessageBox.about(self, "Registro guardado", "Aviso")
+	    QtWidgets.QMessageBox.about(self, "Registro guardado", "Aviso")
 	   
 		
 	   
@@ -55,7 +55,7 @@ class FrmListaproductos(QtGui.QMainWindow):
 	    cursor.execute("SELECT codigo, producto, cantidad, precio FROM productos")
 				
 	    table_info  = cursor.fetchall()
-	    string_list = QStringList()
+	    string_list = QtCore.QStringListModel()
 	    database_table_column_count = 4
 	    database_table_columns = {}
 	    database_table_items = []
@@ -75,12 +75,12 @@ class FrmListaproductos(QtGui.QMainWindow):
 			    print elemento
 			    elemento = str(elemento)
 			   
-			    newitem = QTableWidgetItem(elemento)
+			    newitem = QtWidgets.QTableWidgetItem(elemento)
 			    self.ui.tableWidget.setItem(j, i, newitem) 
 		
 
 if __name__ == "__main__":
     app = QtGui.QApplication(sys.argv)
-    myapp = FrmProductos()
+    myapp = FrmListaproductos()
     myapp.show()
     sys.exit(app.exec_())
