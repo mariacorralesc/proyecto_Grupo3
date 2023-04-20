@@ -1,8 +1,8 @@
 import traceback
 from PyQt6 import QtCore, QtGui, QtWidgets
-from UI.Inventario.uilistaproductos import Ui_UI_Productos
-from UI.Inventario.uilistabodegas import Ui_UI_Bodegas
-from UI.Inventario.uilistadistribuidores import Ui_UI_Distribuidores
+from UI.Inventario.uiListaproductos import Ui_UI_Productos
+from UI.Inventario.uiListabodegas import Ui_UI_Bodegas
+from UI.Inventario.uiListadistribuidores import Ui_UI_Distribuidores
 from UI.Inventario.uiartbodega import Ui_UI_ArtBodega
 from UI.Inventario.uientproducto import Ui_UI_EntProducto
 from Dominio.Inventario.Entities import Productos, Bodega, Distribuidores
