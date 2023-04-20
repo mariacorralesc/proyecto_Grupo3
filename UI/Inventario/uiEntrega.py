@@ -9,13 +9,13 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(951, 628)
-        MainWindow.setStyleSheet("background-color: rgb(0, 0, 255);\n"
+class Ui_Entrega(object):
+    def setupUi(self, Entrega):
+        Entrega.setObjectName("Entrega")
+        Entrega.resize(951, 628)
+        Entrega.setStyleSheet("background-color: rgb(0, 0, 255);\n"
 "background-color: rgb(76, 154, 255);")
-        self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
+        self.centralwidget = QtWidgets.QWidget(parent=Entrega)
         self.centralwidget.setObjectName("centralwidget")
         self.btEntregar = QtWidgets.QPushButton(parent=self.centralwidget)
         self.btEntregar.setGeometry(QtCore.QRect(410, 270, 141, 31))
@@ -95,22 +95,22 @@ class Ui_MainWindow(object):
         font.setPointSize(16)
         self.txtCantidad.setFont(font)
         self.txtCantidad.setObjectName("txtCantidad")
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
+        Entrega.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(parent=Entrega)
         self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+        Entrega.setStatusBar(self.statusbar)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(Entrega)
+        QtCore.QMetaObject.connectSlotsByName(Entrega)
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, Entrega):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Entrega de articulos"))
-        self.btEntregar.setText(_translate("MainWindow", "Entregar"))
-        self.tblproductos.setTabText(self.tblproductos.indexOf(self.tab), _translate("MainWindow", "Tab 1"))
-        self.tblproductos.setTabText(self.tblproductos.indexOf(self.tab_2), _translate("MainWindow", "Tab 2"))
-        self.btImprimir.setText(_translate("MainWindow", "Imprimir"))
-        self.btMenu.setText(_translate("MainWindow", "Menu"))
-        self.lblEntrega.setText(_translate("MainWindow", "Ingrese el nombre del artículo a entregar:"))
-        self.lblCantidad.setText(_translate("MainWindow", "Ingrese la cantidad entregada del artículo:"))
-        self.lblDistribuidor.setText(_translate("MainWindow", "Ingrese el distribuidor a entregar:"))
+        Entrega.setWindowTitle(_translate("Entrega", "Entrega de articulos"))
+        self.btEntregar.setText(_translate("Entrega", "Entregar"))
+        self.tblproductos.setTabText(self.tblproductos.indexOf(self.tab), _translate("Entrega", "Tab 1"))
+        self.tblproductos.setTabText(self.tblproductos.indexOf(self.tab_2), _translate("Entrega", "Tab 2"))
+        self.btImprimir.setText(_translate("Entrega", "Imprimir"))
+        self.btMenu.setText(_translate("Entrega", "Menu"))
+        self.lblEntrega.setText(_translate("Entrega", "Ingrese el nombre del artículo a entregar:"))
+        self.lblCantidad.setText(_translate("Entrega", "Ingrese la cantidad entregada del artículo:"))
+        self.lblDistribuidor.setText(_translate("Entrega", "Ingrese el distribuidor a entregar:"))

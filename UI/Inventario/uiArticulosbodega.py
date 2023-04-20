@@ -9,13 +9,13 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(956, 632)
-        MainWindow.setStyleSheet("background-color: rgb(0, 0, 255);\n"
+class Ui_Articulosbodega(object):
+    def setupUi(self, Articulosbodega):
+        Articulosbodega.setObjectName("Articulosbodega")
+        Articulosbodega.resize(956, 632)
+        Articulosbodega.setStyleSheet("background-color: rgb(0, 0, 255);\n"
 "background-color: rgb(76, 154, 255);")
-        self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
+        self.centralwidget = QtWidgets.QWidget(parent=Articulosbodega)
         self.centralwidget.setObjectName("centralwidget")
         self.txtArticulo = QtWidgets.QLineEdit(parent=self.centralwidget)
         self.txtArticulo.setGeometry(QtCore.QRect(470, 60, 271, 41))
@@ -88,21 +88,21 @@ class Ui_MainWindow(object):
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
         self.tblproductos.addTab(self.tab_2, "")
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
+        Articulosbodega.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(parent=Articulosbodega)
         self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+        Articulosbodega.setStatusBar(self.statusbar)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(Articulosbodega)
+        QtCore.QMetaObject.connectSlotsByName(Articulosbodega)
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, Articulosbodega):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Articulos de Bodega"))
-        self.btAnadir.setText(_translate("MainWindow", "Añadir"))
-        self.btMenu.setText(_translate("MainWindow", "Menu"))
-        self.lblArticulo.setText(_translate("MainWindow", "Ingrese el nombre del artículo a agregar: "))
-        self.lblBodega.setText(_translate("MainWindow", "Ingrese el nombre de la bodega a la que se asignará el artículo: "))
-        self.lblCantidad.setText(_translate("MainWindow", "Ingrese la cantidad disponible del artículo en la bodega:"))
-        self.tblproductos.setTabText(self.tblproductos.indexOf(self.tab), _translate("MainWindow", "Tab 1"))
-        self.tblproductos.setTabText(self.tblproductos.indexOf(self.tab_2), _translate("MainWindow", "Tab 2"))
+        Articulosbodega.setWindowTitle(_translate("Articulosbodega", "Articulos de Bodega"))
+        self.btAnadir.setText(_translate("Articulosbodega", "Añadir"))
+        self.btMenu.setText(_translate("Articulosbodega", "Menu"))
+        self.lblArticulo.setText(_translate("Articulosbodega", "Ingrese el nombre del artículo a agregar: "))
+        self.lblBodega.setText(_translate("Articulosbodega", "Ingrese el nombre de la bodega a la que se asignará el artículo: "))
+        self.lblCantidad.setText(_translate("Articulosbodega", "Ingrese la cantidad disponible del artículo en la bodega:"))
+        self.tblproductos.setTabText(self.tblproductos.indexOf(self.tab), _translate("Articulosbodega", "Tab 1"))
+        self.tblproductos.setTabText(self.tblproductos.indexOf(self.tab_2), _translate("Articulosbodega", "Tab 2"))

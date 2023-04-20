@@ -9,13 +9,13 @@
 from PyQt6 import QtCore, QtGui, QtWidgets
 
 
-class Ui_MainWindow(object):
-    def setupUi(self, MainWindow):
-        MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(955, 632)
-        MainWindow.setStyleSheet("background-color: rgb(0, 0, 255);\n"
+class Ui_Listaproductos(object):
+    def setupUi(self, Listaproductos):
+        Listaproductos.setObjectName("Listaproductos")
+        Listaproductos.resize(955, 632)
+        Listaproductos.setStyleSheet("background-color: rgb(0, 0, 255);\n"
 "background-color: rgb(76, 154, 255);")
-        self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
+        self.centralwidget = QtWidgets.QWidget(parent=Listaproductos)
         self.centralwidget.setObjectName("centralwidget")
         self.lblCodigo = QtWidgets.QLabel(parent=self.centralwidget)
         self.lblCodigo.setGeometry(QtCore.QRect(30, 60, 101, 51))
@@ -120,24 +120,24 @@ class Ui_MainWindow(object):
         self.tab_2 = QtWidgets.QWidget()
         self.tab_2.setObjectName("tab_2")
         self.tblproductos.addTab(self.tab_2, "")
-        MainWindow.setCentralWidget(self.centralwidget)
-        self.statusbar = QtWidgets.QStatusBar(parent=MainWindow)
+        Listaproductos.setCentralWidget(self.centralwidget)
+        self.statusbar = QtWidgets.QStatusBar(parent=Listaproductos)
         self.statusbar.setObjectName("statusbar")
-        MainWindow.setStatusBar(self.statusbar)
+        Listaproductos.setStatusBar(self.statusbar)
 
-        self.retranslateUi(MainWindow)
-        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+        self.retranslateUi(Listaproductos)
+        QtCore.QMetaObject.connectSlotsByName(Listaproductos)
 
-    def retranslateUi(self, MainWindow):
+    def retranslateUi(self, Listaproductos):
         _translate = QtCore.QCoreApplication.translate
-        MainWindow.setWindowTitle(_translate("MainWindow", "Lista de Productos"))
-        self.lblCodigo.setText(_translate("MainWindow", "Código:"))
-        self.lblCantidad.setText(_translate("MainWindow", "Cantidad:"))
-        self.lblProducto.setText(_translate("MainWindow", "Producto:"))
-        self.lblPrecio.setText(_translate("MainWindow", "Precio:"))
-        self.btActualizar.setText(_translate("MainWindow", "Actualizar Lista"))
-        self.btGuardar.setText(_translate("MainWindow", "Guardar"))
-        self.lblRegistro.setText(_translate("MainWindow", "Registro de artículos:"))
-        self.btMenu.setText(_translate("MainWindow", "Menu"))
-        self.tblproductos.setTabText(self.tblproductos.indexOf(self.tab), _translate("MainWindow", "Tab 1"))
-        self.tblproductos.setTabText(self.tblproductos.indexOf(self.tab_2), _translate("MainWindow", "Tab 2"))
+        Listaproductos.setWindowTitle(_translate("Listaproductos", "Lista de Productos"))
+        self.lblCodigo.setText(_translate("Listaproductos", "Código:"))
+        self.lblCantidad.setText(_translate("Listaproductos", "Cantidad:"))
+        self.lblProducto.setText(_translate("Listaproductos", "Producto:"))
+        self.lblPrecio.setText(_translate("Listaproductos", "Precio:"))
+        self.btActualizar.setText(_translate("Listaproductos", "Actualizar Lista"))
+        self.btGuardar.setText(_translate("Listaproductos", "Guardar"))
+        self.lblRegistro.setText(_translate("Listaproductos", "Registro de artículos:"))
+        self.btMenu.setText(_translate("Listaproductos", "Menu"))
+        self.tblproductos.setTabText(self.tblproductos.indexOf(self.tab), _translate("Listaproductos", "Tab 1"))
+        self.tblproductos.setTabText(self.tblproductos.indexOf(self.tab_2), _translate("Listaproductos", "Tab 2"))
